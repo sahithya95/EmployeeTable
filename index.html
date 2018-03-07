@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>employee details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+    
+        <div ng-controller="myctr">
+                <div class="container">
+                    <h1>EMPLOYEE DETAILS</h1><br/>
+                    <form action="" class="form-group" >
+                        <div class="col-md-6">
+                        <input class="form-control" type="search" placeholder="search" ng-model="search"/></div>
+                        <div class="col-md-3">
+                        <input class="form-control" type="limitTo" placeholder="limitTo" ng-model="limit"/></div>
+                        <div class="col-md-3">
+                        <input class="form-control" type="orderBy" placeholder="orderBy" ng-model="order"/></div>
+
+
+                    </form><br/><br/><div style="border:1px solid rgb(173, 167, 167);padding-bottom: 45px;">
+                        <h3 style="text-align: center;">Add details</h3>
+                    <form  class="form-group" ng-submit="adduser()">
+                        <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="name" placeholder="name"/></div>
+                        <div class="col-md-1">
+                        <input type="text" class="form-control" ng-model="id" placeholder="id"/></div>
+                        <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="designation" placeholder="designation"/></div>
+                        <div class="col-md-1">
+                        <input type="text" class="form-control" ng-model="DOJ" placeholder="DOJ"/></div>
+                        <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="gender" placeholder="gender"/></div>
+                        <div class="col-md-2">
+                        <input type="text" class="form-control" ng-model="salary" placeholder="salary"/></div>
+                        <div class="col-md-1">
+                        <input type="text" class="form-control" ng-model="email" placeholder="email"/></div>
+                        <div class="col-md-1">
+                        <input type="submit" value="AddField"></div><br/></div>
+                    </form><br/><br/><br/>
+
+                <table class="table table-bordered" id="table">
+                    <tr>
+                            <th>photo</th> 
+                            <th>name</th>
+                            <th>id</th>
+                            <th>designation</th>
+                            <th>DOJ</th>
+                            <th>gender</th>
+                            <th>salary</th>
+                            <th>email</th>
+                    </tr>
+                    <tr ng-repeat="x in emp | filter:search | limitTo:limit | orderBy:order">
+                            <td><img src="{{x.photo}}" /></td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.id}}</td>
+                            <td>{{x.designation}}</td>
+                            <td>{{x.DOJ}}</td>
+                            <td>{{x.gender}}</td>
+                            <td>{{x.salary}}</td>
+                            <td>{{x.email}}</td>
+                            <td><button ng-click="delete(x)"> Delete </button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>      
+    
+</body>
+</html>

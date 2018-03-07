@@ -1,0 +1,54 @@
+[
+    {
+    "name": "sahithya",
+    "id": "1",
+    "designation" : "web designer",
+    "DOJ" : "1995-03-27",
+    "gender" : "female",
+    "salary" : 30000,
+    "photo": "1.jpg",
+    "email": "sahi@gmail.com"
+    },
+    {
+    "name": "soumya",
+    "id": "2",
+    "designation" : "associate engineer",
+    "DOJ" : "1995-03-15",
+    "gender" : "female",
+    "salary" : 30000,
+    "photo":"2.jpg",
+    "email":"soumya@gmail.com"
+    },
+    {
+    "name": "shamitha",
+    "id": "3",
+    "designation" : "Tech suport",
+    "DOJ" : "1995-10-15",
+    "gender" : "female",
+    "salary" : 8000,
+    "photo":"3.jpg",
+    "email":"shamitha@gmail.com"
+      },
+    {
+    "name": "prathika",
+    "id": "4",
+    "designation" : "Tech support",
+    "DOJ" : "1995-02-17",
+    "gender" : "female",
+    "salary" : 10000,
+    "photo":"4.jpg",
+    "email":"prathika@gmail.com"
+
+     },
+    {
+    "name": "chinmai",
+    "id": "5",
+    "designation" : "developer",
+    "DOJ" : "1995-02-25",
+    "gender" : "female",
+    "salary" : 40000,
+    "photo":"5.jpg",
+    "email":"chinmai@gmail.com"
+
+    }
+]
